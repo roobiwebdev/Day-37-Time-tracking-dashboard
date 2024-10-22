@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Fonts */
+  --primary-font-weight: 500;
+  --secondary-font-weight: 400;
+  --tertiary-font-weight: 300;
+  /* Colors */
+  --text-color: #fafefe;
+  /* Neutral */
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  /* Primary-colors */
+  --Blue: hsl(246, 73%, 58%);
+  --Soft-play: hsl(195, 74%, 62%);
+  --Light-work: hsl(15, 100%, 70%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --soft-red-study: #fe5f7d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Very-dark-blue);
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(4, 258px);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.profile {
+  grid-row: 1 /3;
+  background: var(--Dark-blue);
+  border-radius: 10px;
+}
+
+.profile-info {
+  background: var(--Blue);
+  border-radius: 10px;
+  padding: 2em 1.9em;
+}
+.pro-pic {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.report {
+  font-weight: var(--tertiary-font-weight);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.profile .name {
+  font-size: 2.5rem;
+  font-weight: var(--tertiary-font-weight);
+  line-height: 1.2em;
+  margin-top: -0.3em;
+  margin-bottom: 1em;
+}
+
+.list {
+  padding: 0.8em 2em;
+}
+
+.period {
+  list-style: none;
+  padding: 0.6em 0;
+  color: var(--Pale-Blue);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.active {
+  color: white;
+}
+.period:hover {
+  color: white;
+}
+
+.period-special {
+  color: white;
+}
+.card {
+  border-radius: 15px;
+}
+
+.card-1 {
+  background-image: url(images/icon-work.svg);
+  background-color: var(--Light-work);
+}
+
+.card-2 {
+  background: url(images/icon-play.svg);
+  background-color: var(--Soft-play);
+}
+
+.card-3 {
+  background-image: url(images/icon-study.svg);
+  background-color: var(--soft-red-study);
+}
+
+.card-4 {
+  background-image: url(images/icon-exercise.svg);
+  background-color: var(--Lime-green-exercise);
+}
+
+.card-5 {
+  background-image: url(images/icon-social.svg);
+  background-color: var(--Violet-social);
+}
+
+.card-6 {
+  background-image: url(images/icon-self-care.svg);
+  background-color: var(--Soft-orange-self-care);
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6 {
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+}
+.nested-card {
+  height: 80%;
+  width: 100%;
+  margin-top: 2.8em;
+  background: var(--Dark-blue);
+  padding: 1.5em 1.5em 0 1.9em;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nested-card:hover {
+  background: #35387b;
+  cursor: pointer;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 1em; */
+}
+
+.title h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nested-card .hrs {
+  font-size: 3.9rem;
+  font-weight: var(--tertiary-font-weight);
+  margin-top: 0.3em;
+}
+
+.nested-card .time {
+  color: var(--Pale-Blue);
+  font-size: 16px;
+  font-weight: var(--tertiary-font-weight);
+  margin: 0.5em 0 0.8em 0;
+}
+
+@media screen and (width<=67em) {
+  body {
+    height: auto;
+  }
+  .container {
+    display: block;
+    margin: 2em;
+    width: 100%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .profile-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 1em;
+  }
+
+  .pro-pic {
+    margin: 0;
+  }
+
+  .profile-info .report {
+    display: block;
+    margin-bottom: -0.5em;
+  }
+  .profile-info .name {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .profile-info .name br{
+    display: none;
+  }
+
+  .list {
+    padding: 1em 2em;
+  }
+  .list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list ul li {
+    font-size: 1.3rem;
+    margin: 0 1.5em;
+  }
+
+  .title h2 {
+    font-size: 19px;
+    font-weight: normal;
+  }
+
+  .nested-card {
+    height: 83%;
+  }
+
+  .nested-card .hrs {
+    font-size: 2.5rem;
+  }
+  .nested-card .time {
+    font-size: 22px;
+  }
+  @media screen and (width<=46em) {
+    .nested-card {
+      height: 80%;
+    }
+    .times {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: -0.5em;
+    }
+  }
+}
