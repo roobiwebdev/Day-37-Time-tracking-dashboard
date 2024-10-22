@@ -15,7 +15,7 @@ Technologies Used
 #JavaScript
 
 HTML Structure
-The HTML file sets up the layout with different sections for profile info, activity cards, and time toggles. Semantic elements like <div>, <img>, <h1>, and <ul> are used for structure and presentation.
+The HTML file sets up the layout with different sections for profile info, activity cards, and time toggles. Semantic elements are used for structure and presentation.
 
 CSS Styling
 Font Import: I've Used Google Fonts to import the "Rubik" font for a modern and consistent look.
